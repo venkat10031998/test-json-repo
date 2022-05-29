@@ -1,0 +1,75 @@
+package basic;
+
+public class emp {
+	private String  emp_id;
+	private String  emp_name;
+	private String  emp_exp;
+	private String  emp_desi;
+	private String  emp_sal;
+	public String getEmp_id() {
+		return emp_id;
+	}
+	public void setEmp_id(String emp_id) {
+		this.emp_id = emp_id;
+	}
+	public String getEmp_name() {
+		return emp_name;
+	}
+	public void setEmp_name(String emp_name) {
+		this.emp_name = emp_name;
+	}
+	public String getEmp_exp() {
+		return emp_exp;
+	}
+	public void setEmp_exp(String emp_exp) {
+		this.emp_exp = emp_exp;
+	}
+	public String getEmp_desi() {
+		return emp_desi;
+	}
+	public void setEmp_desi(String emp_desi) {
+		this.emp_desi = emp_desi;
+	}
+	public String getEmp_sal() {
+		return emp_sal;
+	}
+	public void setEmp_sal(String emp_sal) {
+		this.emp_sal = emp_sal;
+	}
+	
+	
+}
+
+package basic;
+import java.util.*;
+import java.util.ArrayList;
+
+public class emp1 {
+
+	public static void main(String[] args) {
+		emp e=new emp();
+		HashMap<Integer,ArrayList>hm=new HashMap();
+		ArrayList<String> a1= new ArrayList();
+		e.setEmp_name("ram");
+		e.setEmp_exp("1");
+		e.setEmp_desi("jr.eng");
+		e.setEmp_sal("5lpa");
+		
+	
+		a1.add(e.getEmp_name());
+		a1.add(e.getEmp_exp());
+		a1.add(e.getEmp_desi());
+		a1.add(e.getEmp_sal());
+		hm.put(11, a1);
+		
+		ArrayList<String> all= new ArrayList();
+		all.addAll(hm);
+		for(Map.Entry k:hm.entrySet()) {
+			System.out.println(k.getKey()+" "+k.getValue());
+		}
+			
+System.out.println(e);
+	}
+
+}
+
